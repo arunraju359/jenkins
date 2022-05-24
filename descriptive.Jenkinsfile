@@ -5,7 +5,11 @@ pipeline{
          booleanParam(name: 'DESTROY', defaultValue: false, description: 'To know the boolean')
         }
     options { 
-        buildDiscarder(logRotator(numToKeepStr: '1')) }
+        buildDiscarder(logRotator(numToKeepStr: '1'))
+        disableConcurrentBuilds()
+        timeout(time: 35, unit: 'SECONDS')
+        
+     }
     stages{
         stage ('One: Downloading the code from repo'){
             steps{
@@ -16,6 +20,7 @@ pipeline{
             steps{
                 sh "ls -ltr"
                 echo "Hi the corresponding environment is ${params.TIER}"
+                echo "sleep 30"
             }
         }
         stage ('Three: To  validate the boolean'){
