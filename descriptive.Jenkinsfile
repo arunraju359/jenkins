@@ -1,18 +1,20 @@
-pipeline {
+pipeline{
     agent any
     stages{
-        stage ('One: Download the code from github'){
+        stage ('One: Downloading the code from repo'){
             steps{
                 git branch: 'main', url: 'https://github.com/arunraju359/jenkins.git'
             }
         }
-        stage ('Two: Listing it'){
+        stage ('Two: Listing the contents'){
             steps{
                 sh "ls -ltr"
+                echo "Hi"
             }
         }
     }
+
+
+
+
 }
-
-      
-
