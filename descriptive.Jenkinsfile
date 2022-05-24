@@ -4,6 +4,8 @@ pipeline{
          string(name: 'TIER', defaultValue: 'BRANCHING', description: 'To know the tier usage')
          booleanParam(name: 'DESTROY', defaultValue: false, description: 'To know the boolean')
         }
+    options { 
+        buildDiscarder(logRotator(numToKeepStr: '1')) }
     stages{
         stage ('One: Downloading the code from repo'){
             steps{
