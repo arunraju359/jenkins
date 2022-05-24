@@ -5,7 +5,7 @@ pipeline{
          booleanParam(name: 'DESTROY', defaultValue: false, description: 'To know the boolean')
         }
     options { 
-        buildDiscarder(logRotator(numToKeepStr: '1'))
+        buildDiscarder(logRotator(numToKeepStr: '4'))
         disableConcurrentBuilds()
         timeout(time: 35, unit: 'SECONDS')
         
