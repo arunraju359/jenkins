@@ -2,6 +2,7 @@ pipeline{
     agent any
     parameters {
          string(name: 'TIER', defaultValue: 'BRANCHING', description: 'To know the tier usage')
+         booleanParam(name: 'DESTROY', defaultValue: true, description: 'To know the boolean')
         }
     stages{
         stage ('One: Downloading the code from repo'){
