@@ -20,7 +20,7 @@ pipeline{
             steps{
                 sh "ls -ltr"
                 echo "Hi the corresponding environment is ${params.TIER}"
-                echo "sleep 30"
+                echo "sleep 50"
             }
         }
         stage ('Three: To  validate the boolean'){
