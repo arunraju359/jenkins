@@ -7,7 +7,7 @@ pipeline{
     options { 
         buildDiscarder(logRotator(numToKeepStr: '4'))
         disableConcurrentBuilds()
-        timeout(time: 2, unit: 'MINUTES')
+        timeout(time: 35, unit: 'SECONDS')
         
      }
     stages{
@@ -20,7 +20,7 @@ pipeline{
             steps{
                 sh "ls -ltr"
                 sh "echo Hi the corresponding environment is ${params.TIER}"
-                sh "echo sleep 100"
+                sh "echo sleep 40"
             }
         }
         stage ('Three: To  validate the boolean'){
