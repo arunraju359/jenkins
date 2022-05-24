@@ -12,7 +12,7 @@ pipeline{
         stage ('Two: Listing the contents'){
             steps{
                 sh "ls -ltr"
-                echo "Hi"
+                echo "Hi the corresponding environment is ${params.TIER}"
             }
         }
     }
