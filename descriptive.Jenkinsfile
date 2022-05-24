@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters {
+         string(name: 'TIER', defaultValue: 'BRANCHING', description: 'To know the tier usage')
+        }
     stages{
         stage ('One: Downloading the code from repo'){
             steps{
