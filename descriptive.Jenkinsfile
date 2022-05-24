@@ -19,8 +19,8 @@ pipeline{
         stage ('Two: Listing the contents'){
             steps{
                 sh "ls -ltr"
-                echo "Hi the corresponding environment is ${params.TIER}"
-                echo "sleep 100"
+                sh "echo Hi the corresponding environment is ${params.TIER}"
+                sh "echo sleep 100"
             }
         }
         stage ('Three: To  validate the boolean'){
