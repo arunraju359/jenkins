@@ -7,6 +7,7 @@ pipeline{
             {
                  git branch: 'main', url: 'https://github.com/arunraju359/jenkins.git'
             }
+        }
         stage('Two : Listing the contents')
         {
             steps
