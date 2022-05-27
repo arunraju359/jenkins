@@ -32,6 +32,19 @@ pipeline
                 echo "the choice chosen is ${params.JDK_VERSION}"
             }
         }
+        stage('Three : Creating and Destroying')
+        {
+            when 
+                {
+                    expression {params.TOGGLE}
+                }
+            steps
+            {
+                echo "This is to create and Destroy"
+                
+
+            }
+        }
 
 
     }
