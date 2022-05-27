@@ -26,7 +26,7 @@ pipeline
             {
                 sh "ls -ltr"
                 echo "the parameter that is passed is ${params.ENVIRONMENT}"
-                echo "the text is ${params.MyText}"
+                echo "the text is \n ${params.MyText}"
             }
         }
 
