@@ -4,7 +4,7 @@ pipeline
     parameters
     {
         string(name: 'ENVIRONMENT', defaultValue: 'Development', description: 'This pipeline project is to check the pipeline flow thru DSL')
-        text(name: 'DEPLOY_TEXT', defaultValue: 'One', description: '')
+        text(name: 'DEPLOY_TEXT', defaultValue: 'One\nTwo', description: '')
 
 
 
