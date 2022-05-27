@@ -25,7 +25,7 @@ pipeline
             steps
             {
                 sh "ls -ltr"
-                sh "echo the parameter that is passed is ${params.ENVIRONMENT}"
+                echo "the parameter that is passed is ${params.ENVIRONMENT}"
                 echo "the text is ${params.MyText}"
             }
         }
