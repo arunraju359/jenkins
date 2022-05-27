@@ -5,6 +5,8 @@ pipeline
     {
         string(name: 'ENVIRONMENT', defaultValue: 'Development', description: 'This pipeline project is to check the pipeline flow thru DSL')
         text(name: 'MyText', defaultValue: '', description: '')
+        booleanParam(name: 'TOGGLE', defaultValue: false, description: 'Toggle this value')
+        choice(name: 'JDK_VERSION', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
 
 
@@ -27,6 +29,7 @@ pipeline
                 sh "ls -ltr"
                 echo "the parameter that is passed is ${params.ENVIRONMENT}"
                 echo "the text is \n ${params.MyText}"
+                echo "the choice chosen is ${params.JDK_VERSION}"
             }
         }
 
