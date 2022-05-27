@@ -8,8 +8,13 @@ pipeline
         booleanParam(name: 'TOGGLE', defaultValue: false, description: 'Toggle this value')
         choice(name: 'JDK_VERSION', choices: ['One', 'Two', 'Three'], description: 'Pick something')
 
+    }
 
-
+    options
+    {
+        buildDiscarder(logRotator(numToKeepStr: '1'))
+        disableConcurrentBuilds()
+        timeout(time: 1, unit: 'SECONDS')
 
 
     }
@@ -30,6 +35,13 @@ pipeline
                 echo "the parameter that is passed is ${params.ENVIRONMENT}"
                 echo "the text is \n ${params.MyText}"
                 echo "the choice chosen is ${params.JDK_VERSION}"
+                sh "sleep 45"
+            }
+        }
+        stage('Two A) : To tell Hi')
+        {
+            steps{
+                echo "Hiiii between the build to verify the sleep"
             }
         }
         stage('Three : Creating and Destroying')
