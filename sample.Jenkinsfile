@@ -35,7 +35,7 @@ pipeline
                 echo "the parameter that is passed is ${params.ENVIRONMENT}"
                 echo "the text is \n ${params.MyText}"
                 echo "the choice chosen is ${params.JDK_VERSION}"
-                sh "sleep 45"
+                sh "sleep 4"
             }
         }
         stage('Parallel staging')
