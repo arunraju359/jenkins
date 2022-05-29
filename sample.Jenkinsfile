@@ -56,6 +56,21 @@ pipeline
                 }
             }
         }
+        stage('Parallel with keyword Parallel')
+        {
+            parallel
+            {
+                stage('On Branch A')
+                {
+                    echo "On Branch A"
+                }
+                stage('On Branch B')
+                {
+                    echo "On Branch B"
+                }
+            }
+
+        }
         stage('Two A) : To tell Hi')
         {
             steps{
