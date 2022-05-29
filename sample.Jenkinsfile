@@ -62,11 +62,16 @@ pipeline
             {
                 stage('On Branch A')
                 {
+                    steps
+                    {
                     echo "On Branch A"
+                    }
                 }
                 stage('On Branch B')
                 {
+                    steps{
                     echo "On Branch B"
+                     }
                 }
             }
 
