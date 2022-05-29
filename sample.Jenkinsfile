@@ -38,6 +38,24 @@ pipeline
                 sh "sleep 45"
             }
         }
+        stage('Parallel staging')
+        {
+            stages
+            {
+                stage('Parallel : 1')
+                {
+                    steps{
+                        echo "Hi this is stage 1"
+                    }
+                }
+                stage('Parallel : 2')
+                {
+                    steps{
+                        echo "Hi this is stage 2"
+                    }
+                }
+            }
+        }
         stage('Two A) : To tell Hi')
         {
             steps{
