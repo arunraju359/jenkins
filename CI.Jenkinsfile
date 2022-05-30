@@ -1,6 +1,6 @@
 pipeline
 {
-    agent any {}
+    agent any 
     stages
     {
         stage('One : Download the repo')
