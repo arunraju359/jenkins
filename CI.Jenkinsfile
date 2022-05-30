@@ -13,6 +13,7 @@ pipeline
                 git branch: 'main', url: 'https://github.com/arunraju359/jenkins.git'
                 sh 'ls -ltr'
                 sh 'uptime'
+                sh 'ifconfig.co'
                 
             }
             
