@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git branch: 'main', url: 'https://github.com/arunraju359/jenkins.git'
+                git branch: 'main', url: 'https://github.com/arunraju359/studentapp-ui.git'
                 sh 'ls -ltr'
             }
             
